@@ -3,34 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Química - Prof. Felipe</title>
+    <title>Site do Professor</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <img src="img/logo.png" class="logo">
-    <nav>
-        <a href="index.html">Identidade Visual</a>
-        <a href="sobre.html">Informações</a>
-        <a href="index.html#avisos">Avisos</a>
-        <a href="horarios.html">Horários</a>
-        <a href="sobre.html#equipe">Equipe</a>
-    </nav>
-</header>
+    <!-- -------------------- HEADER -------------------- -->
+    <header>
+        <img src="img/logo.png" class="logo">
+        <nav>
+            <a href="#inicio" class="ativo">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#horarios">Horários</a>
+            <a href="#atividades">Atividades</a>
+        </nav>
+    </header>
 
-<section class="hero">
-    <h1>Identidade Visual</h1>
-    <p>Guia simples de cores e estilo do projeto.</p>
+    <!-- -------------------- SEÇÃO INÍCIO -------------------- -->
+    <main>
 
-    <div class="cores">
-        <div class="cor" style="background:#f89565">#f89565</div>
-        <div class="cor" style="background:#3362a0">#3362a0</div>
-        <div class="cor" style="background:#000000; color:white">#000000</div>
-        <div class="cor" style="background:white; border:1px solid #ccc">#ffffff</div>
-        <div class="cor" style="background:#222122; color:white">#222122</div>
-    </div>
-</section>
+        <section id="inicio" style="padding-top:40px;">
+            <h1>Bem-vindo ao Site do Professor</h1>
+            <p style="text-align:center; font-size:1.2rem; max-width:700px; margin:auto;">
+                Aqui você encontra tudo o que precisa: dados sobre o professor, horários, avisos, tarefas e datas importantes.
+                O site é totalmente responsivo e simples, criado por uma aluna do IFPR.
+            </p>
+        </section>
+
+        <!-- -------------------- SEÇÃO SOBRE -------------------- -->
+        <section id="sobre" class="sobre-container" style="margin-top:80px;">
+            <img src="img/professor.jpg" class="sobre-img">
+            <div class="sobre-texto">
+                <h1>Sobre o Professor</h1>
+                <p>
+                    Nome do professor, formação, áreas de pesquisa, matérias que ministra e um pequeno resumo profissional.
+                    Esta parte representa a biografia do docente, com um toque leve e organizado.
+                </p>
+            </div>
+        </section>
+
+        <!-- -------------------- SEÇÃO HORÁRIOS -------------------- -->
+        <section id="horarios" style="margin-top:80px;">
+            <h1>Horários de Aula</h1>
+
+            <table class="tabela-horarios">
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                    <th>Disciplina</th>
+                </tr>
+
+                <tr>
+                    <td>Segunda</td>
+                    <td>08:00 - 10:00</td>
+                    <td>Matemática</td>
+                </tr>
+
+                <tr>
+                    <td>Terça</td>
+                    <td>10:00 - 12:00</td>
+                    <td>Física</td>
+                </tr>
+
+                <tr>
+                    <td>Quinta</td>
+                    <td>14:00 - 16:00</td>
+                    <td>Programação</td>
+                </tr>
+
+                <tr>
+                    <td>Sexta</td>
+                    <td>08:00 - 10:00</td>
+                    <td>Projeto Integrador</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- -------------------- SEÇÃO ATIVIDADES -------------------- -->
+        <section id="atividades" style="margin-top:80px;">
+            <h1>Atividades, Avisos e Datas</h1>
+
+            <div class="cards">
+
+                <!-- Avisos -->
+                <div class="card">
+                    <h2>Avisos</h2>
+                    <ul>
+                        <li>📌 Prova da unidade — 10/12</li>
+                        <li>📌 Trazer o livro na sexta</li>
+                        <li>📌 Trabalho em dupla permitido</li>
+                    </ul>
+                </div>
+
+                <!-- Tarefas -->
+                <div class="card">
+                    <h2>Tarefas</h2>
+                    <ul>
+                        <li>✔ Exercícios 1–5 da pág. 24</li>
+                        <li>✔ Enviar formulário</li>
+                        <li>✔ Preparar apresentação</li>
+                    </ul>
+                </div>
+
+                <!-- Datas importantes -->
+                <div class="card">
+                    <h2>Datas Importantes</h2>
+                    <ul>
+                        <li>📅 05/12 – Entrega do trabalho</li>
+                        <li>📅 10/12 – Prova</li>
+                        <li>📅 13/12 – Revisão geral</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- -------------------- FOOTER -------------------- -->
+    <footer style="margin-top:100px;">
+        <p>© 2025 • Site desenvolvido por Kemily – IFPR</p>
+    </footer>
 
 </body>
 </html>

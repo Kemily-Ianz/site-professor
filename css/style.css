@@ -1,180 +1,211 @@
-/* CORES
-#f89565 – laranja
-#3362a0 – azul
-#000000 – preto
-#ffffff – branco
-#222122 – cinza escuro
-*/
-
-body {
+/* ============================
+   RESET BÁSICO
+============================ */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* MENU */
-header {
-    background: #000;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #3362a0;
-}
-
-header nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-header nav a:hover {
-    color: #f89565;
-}
-
-/* LOGO */
-.logo {
-    width: 80px;
-}
-
-/* SEÇÕES */
-.hero, .sobre, .horarios {
-    padding: 40px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 60px;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 30px;
-    color: #f89565;
-}
-
-/* CORES DA IDENTIDADE */
-.cores {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.cor {
-    width: 150px;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-/* SOBRE O PROFESSOR */
-.perfil {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.foto-prof {
-    width: 250px;
-    border-radius: 20px;
-    margin-right: 30px;
-}
-
-.texto {
-    max-width: 400px;
-    font-size: 18px;
-}
-
-.email {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #f89565;
-}
-
-/* TABELA */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-}
-
-th {
-    background: #3362a0;
-    padding: 15px;
-}
-
-td {
-    background: #5b8ad1;
-    padding: 15px;
-    border: 1px solid #000;
-}
-
-.btn-voltar {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 10px 20px;
-    background: #3362a0;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.btn-voltar:hover {
-    background: #f89565;
-}
-/* Container geral */
-.container-atividades {
-    width: 90%;
-    margin: 80px auto;
-    text-align: center;
-}
-
-/* Título */
-.container-atividades h1 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-/* Área dos cards */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Cada quadradinho */
-.card {
-    background: #ffffffc5;
-    border-radius: 20px;
-    width: 300px;
-    padding: 25px;
-    text-align: left;
-    box-shadow: 0 4px 10px #00000025;
-    border: 1px solid #ececec;
-    backdrop-filter: blur(5px);
-}
-
-/* Título do card */
-.card h2 {
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+/* ============================
+   FUNDO DO SITE
+============================ */
+body {
+    background: #f5f0e8;  /* tom pastel/bege parecido com seu design */
     color: #333;
 }
 
-/* Lista */
-.card ul {
-    list-style: none;
-    padding: 0;
+/* ============================
+   HEADER / MENU
+============================ */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 3px 10px #00000015;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.card ul li {
-    padding: 5px 0;
+.logo {
+    height: 55px;
+}
+
+/* Navegação */
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
     font-size: 1rem;
+    color: #444;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #e7dbcd;
+}
+
+nav .ativo {
+    background: #d8c8b7;
+    color: #222;
+    font-weight: bold;
+}
+
+/* ============================
+    SEÇÕES PADRÃO
+============================ */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #3b2f26;
+    text-align: center;
+}
+
+/* ============================
+   CARDS (caixinhas iguais às imagens)
+============================ */
+.cards {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 310px;
+    background: #ffffffdd;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 5px 12px #00000020;
+    border: 1px solid #e0d8cf;
+    backdrop-filter: blur(4px);
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #4b3f35;
+}
+
+.card p,
+.card li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* ============================
+   PÁGINA SOBRE (se tiver foto do professor)
+============================ */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.sobre-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #00000025;
+}
+
+.sobre-texto {
+    max-width: 500px;
+    font-size: 1.1rem;
+    color: #4a4138;
+}
+
+/* ============================
+   TABELA DE HORÁRIOS
+============================ */
+.tabela-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffffdd;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px #00000020;
+}
+
+.tabela-horarios th {
+    background: #d8c8b7;
+    padding: 12px;
+}
+
+.tabela-horarios td {
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.tabela-horarios tr:nth-child(even) {
+    background: #f7f2ea;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+    background: #efe7de;
+    padding: 20px;
+    margin-top: 70px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #d6c7b9;
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+@media (max-width: 700px) {
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
 }
