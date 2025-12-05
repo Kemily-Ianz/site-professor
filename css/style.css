@@ -1,24 +1,15 @@
-/* ============================
-   RESET BÁSICO
-============================ */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ============================
-   FUNDO DO SITE
-============================ */
 body {
-    background: #f5f0e8;  /* tom pastel/bege parecido com seu design */
+    background: #f5f0e8; 
     color: #333;
 }
 
-/* ============================
-   HEADER / MENU
-============================ */
 header {
     width: 100%;
     padding: 20px 40px;
@@ -36,7 +27,6 @@ header {
     height: 55px;
 }
 
-/* Navegação */
 nav a {
     margin-left: 20px;
     text-decoration: none;
@@ -57,16 +47,12 @@ nav .ativo {
     font-weight: bold;
 }
 
-/* ============================
-    SEÇÕES PADRÃO
-============================ */
 main {
     width: 90%;
     max-width: 1200px;
     margin: 60px auto;
 }
 
-/* Títulos */
 h1 {
     margin-bottom: 25px;
     font-size: 2rem;
@@ -74,9 +60,6 @@ h1 {
     text-align: center;
 }
 
-/* ============================
-   CARDS (caixinhas iguais às imagens)
-============================ */
 .cards {
     display: flex;
     gap: 25px;
@@ -116,9 +99,6 @@ h1 {
     padding-left: 0;
 }
 
-/* ============================
-   PÁGINA SOBRE (se tiver foto do professor)
-============================ */
 .sobre-container {
     display: flex;
     align-items: center;
@@ -141,9 +121,6 @@ h1 {
     color: #4a4138;
 }
 
-/* ============================
-   TABELA DE HORÁRIOS
-============================ */
 .tabela-horarios {
     width: 100%;
     border-collapse: collapse;
@@ -168,9 +145,6 @@ h1 {
     background: #f7f2ea;
 }
 
-/* ============================
-   FOOTER
-============================ */
 footer {
     background: #efe7de;
     padding: 20px;
@@ -181,9 +155,6 @@ footer {
     border-top: 1px solid #d6c7b9;
 }
 
-/* ============================
-   RESPONSIVIDADE
-============================ */
 @media (max-width: 700px) {
     
     nav {
