@@ -128,3 +128,53 @@ td {
 .btn-voltar:hover {
     background: #f89565;
 }
+/* Container geral */
+.container-atividades {
+    width: 90%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* Título */
+.container-atividades h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* Área dos cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cada quadradinho */
+.card {
+    background: #ffffffc5;
+    border-radius: 20px;
+    width: 300px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 10px #00000025;
+    border: 1px solid #ececec;
+    backdrop-filter: blur(5px);
+}
+
+/* Título do card */
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* Lista */
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 5px 0;
+    font-size: 1rem;
+}
