@@ -8,9 +8,8 @@
 </head>
 <body>
 
-    <!-- -------------------- HEADER -------------------- -->
     <header>
-        <img src="img/logo.png" class="logo">
+        <img src="img/logo.png" class="logo" alt="Logo do Professor"> 
         <nav>
             <a href="#inicio" class="ativo">Início</a>
             <a href="#sobre">Sobre</a>
@@ -19,32 +18,29 @@
         </nav>
     </header>
 
-    <!-- -------------------- SEÇÃO INÍCIO -------------------- -->
     <main>
 
-        <section id="inicio" style="padding-top:40px;">
-            <h1>Bem-vindo ao Site do Professor</h1>
-            <p style="text-align:center; font-size:1.2rem; max-width:700px; margin:auto;">
+        <section id="inicio">
+            <h1>Bem-vindo ao Site do Professor</h1> 
+            <p class="introducao-texto"> 
                 Aqui você encontra tudo o que precisa: dados sobre o professor, horários, avisos, tarefas e datas importantes.
             </p>
         </section>
 
-        <!-- -------------------- SEÇÃO SOBRE -------------------- -->
-        <section id="sobre" class="sobre-container" style="margin-top:80px;">
-            <img src="img/professor.jpg" class="sobre-img">
+        <section id="sobre" class="sobre-container">
+            <img src="img/professor.jpg" class="sobre-img" alt="Foto do Professor">
             <div class="sobre-texto">
-                <h1>Sobre o Professor</h1>
+                <h2>Sobre o Professor</h2> 
                 <p>
                     Nome do professor, formação, áreas de pesquisa, matérias que ministra e um pequeno resumo profissional.
                 </p>
             </div>
         </section>
 
-        <!-- -------------------- SEÇÃO HORÁRIOS -------------------- -->
-        <section id="horarios" style="margin-top:80px;">
-            <h1>Horários de Aula</h1>
+        <section id="horarios">
+            <h2>Horários de Aula</h2>
             
-            <table id="quadro-horarios">
+            <table id="quadro-horarios" class="tabela-horarios"> 
                         <thead>
                         <tr>
                             <th>Horário</th>
@@ -57,124 +53,59 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <!-- Cada linha representa um intervalo fixo -->
-                                <tr data-intervalo="07:30-09:30">
-                                    <th class="hora">
-                                    07h30 - 09h30<br>
-                                    <span class="rotulo">Turma:</span><br>
-                                    <span class="rotulo">Sala:</span>
-                                    </th>
-                                    <td data-dia="Segunda-feira"></td>
-                                    <td data-dia="Terça-feira"></td>
-                                    <td data-dia="Quarta-feira"></td>
-                                    <td data-dia="Quinta-feira"></td>
-                                    <td data-dia="Sexta-feira"></td>
-                                    <td data-dia="Sábado"></td>
-                                </tr>
-
-                                <tr data-intervalo="10:00-12:00">
-                                    <th class="hora">
-                                    10h00 - 12h00<br>
-                                    <span class="rotulo">Turma:</span><br>
-                                    <span class="rotulo">Sala:</span>
-                                    </th>
-                                    <td data-dia="Segunda-feira"></td>
-                                    <td data-dia="Terça-feira"></td>
-                                    <td data-dia="Quarta-feira"></td>
-                                    <td data-dia="Quinta-feira"></td>
-                                    <td data-dia="Sexta-feira"></td>
-                                    <td data-dia="Sábado"></td>
-                                </tr>
-
-                                <tr data-intervalo="13:30-15:30">
-                                    <th class="hora">
-                                    13h30 - 15h30<br>
-                                    <span class="rotulo">Turma:</span><br>
-                                    <span class="rotulo">Sala:</span>
-                                    </th>
-                                    <td data-dia="Segunda-feira"></td>
-                                    <td data-dia="Terça-feira"></td>
-                                    <td data-dia="Quarta-feira"></td>
-                                    <td data-dia="Quinta-feira"></td>
-                                    <td data-dia="Sexta-feira"></td>
-                                    <td data-dia="Sábado"></td>
-                                </tr>
-
-                                <tr data-intervalo="16:00-18:00">
-                                    <th class="hora">
-                                    16h00 - 18h00<br>
-                                    <span class="rotulo">Turma:</span><br>
-                                    <span class="rotulo">Sala:</span>
-                                    </th>
-                                    <td data-dia="Segunda-feira"></td>
-                                    <td data-dia="Terça-feira"></td>
-                                    <td data-dia="Quarta-feira"></td>
-                                    <td data-dia="Quinta-feira"></td>
-                                    <td data-dia="Sexta-feira"></td>
-                                    <td data-dia="Sábado"></td>
-                                </tr>
-
-                                <tr data-intervalo="19:00-20:40">
-                                    <th class="hora">
-                                    19h00 - 20h40<br>
-                                    <span class="rotulo">Turma:</span><br>
-                                    <span class="rotulo">Sala:</span>
-                                    </th>
-                                    <td data-dia="Segunda-feira"></td>
-                                    <td data-dia="Terça-feira"></td>
-                                    <td data-dia="Quarta-feira"></td>
-                                    <td data-dia="Quinta-feira"></td>
-                                    <td data-dia="Sexta-feira"></td>
-                                    <td data-dia="Sábado"></td>
-                                </tr>
-
-                                <tr data-intervalo="21:00-22:40">
-                                    <th class="hora">
-                                    21h00 - 22h40<br>
-                                    <span class="rotulo">Turma:</span><br>
-                                    <span class="rotulo">Sala:</span>
-                                    </th>
-                                    <td data-dia="Segunda-feira"></td>
-                                    <td data-dia="Terça-feira"></td>
-                                    <td data-dia="Quarta-feira"></td>
-                                    <td data-dia="Quinta-feira"></td>
-                                    <td data-dia="Sexta-feira"></td>
-                                    <td data-dia="Sábado"></td>
-                                </tr>
+                            <tr data-intervalo="07:30-09:30">
+                                    <th class="hora">
+                                    07h30 - 09h30<br>
+                                    <span class="rotulo">Turma:</span><br>
+                                    <span class="rotulo">Sala:</span>
+                                    </th>
+                                    <td data-dia="Segunda-feira"></td>
+                                    <td data-dia="Terça-feira"></td>
+                                    <td data-dia="Quarta-feira"></td>
+                                    <td data-dia="Quinta-feira"></td>
+                                    <td data-dia="Sexta-feira"></td>
+                                    <td data-dia="Sábado"></td>
+                                </tr>
+                            <tr data-intervalo="21:00-22:40">
+                                    <th class="hora">
+                                    21h00 - 22h40<br>
+                                    <span class="rotulo">Turma:</span><br>
+                                    <span class="rotulo">Sala:</span>
+                                    </th>
+                                    <td data-dia="Segunda-feira"></td>
+                                    <td data-dia="Terça-feira"></td>
+                                    <td data-dia="Quarta-feira"></td>
+                                    <td data-dia="Quinta-feira"></td>
+                                    <td data-dia="Sexta-feira"></td>
+                                    <td data-dia="Sábado"></td>
+                                </tr>
                         </tbody>
                     </table>
-                   
+                    
         </section>
-        <!-- -------------------- SEÇÃO ATIVIDADES -------------------- -->
-        <section id="atividades" style="margin-top:80px;">
-            <h1>Atividades, Avisos e Datas</h1>
+        <section id="atividades">
+            <h2>Atividades, Avisos e Datas</h2>
 
             <div class="cards">
 
-                <!-- Avisos -->
                 <div class="card">
-                    <h2>Avisos</h2>
-                    <ul>
+                    <h3>Avisos</h3> <ul>
                         <li>📌 Prova da unidade — 10/12</li>
                         <li>📌 Trazer o livro na sexta</li>
                         <li>📌 Trabalho em dupla permitido</li>
                     </ul>
                 </div>
 
-                <!-- Tarefas -->
                 <div class="card">
-                    <h2>Tarefas</h2>
-                    <ul>
+                    <h3>Tarefas</h3> <ul>
                         <li>✔ Exercícios 1–5 da pág. 24</li>
                         <li>✔ Enviar formulário</li>
                         <li>✔ Preparar apresentação</li>
                     </ul>
                 </div>
 
-                <!-- Datas importantes -->
                 <div class="card">
-                    <h2>Datas Importantes</h2>
-                    <ul>
+                    <h3>Datas Importantes</h3> <ul>
                         <li>📅 05/12 – Entrega do trabalho</li>
                         <li>📅 10/12 – Prova</li>
                         <li>📅 13/12 – Revisão geral</li>
@@ -186,11 +117,11 @@
 
     </main>
 
-    <!-- -------------------- FOOTER -------------------- -->
-    <footer style="margin-top:100px;">
+    <footer> 
         <p>© 2025 • Site desenvolvido por Kemily e Ana Maria– IFPR</p>
     </footer>
-        <script src="../site-professor/horario-prof.js"></script>
+    
+    <script src="horario-prof.js"></script> 
 
 </body>
 </html>
