@@ -1,6 +1,5 @@
-function removerZero(hora) {
-  // transforma "07:30" → "7:30", "09:00" → "9:00"
-  return hora.replace(/^0/, '');
+function normalizarHora(h) {
+  return h.replace(/\s+/g, '').padStart(5, '0');
 }
 
 function montarQuadroHorarios(csvText) {
@@ -13,14 +12,10 @@ function montarQuadroHorarios(csvText) {
     const dia        = partes[0].trim();
     const turma      = partes[1].trim();
     const disciplina = partes[2].trim();
-    const inicioRaw  = partes[3].trim();
-    const fimRaw     = partes[4].trim();
+    const inicio     = normalizarHora(partes[3].trim());
+    const fim        = normalizarHora(partes[4].trim());
 
-    if (!dia || (!turma && !disciplina && !inicioRaw && !fimRaw)) continue;
-
-    // remove zero à esquerda: "07:30" → "7:30"
-    const inicio = removerZero(inicioRaw);
-    const fim    = removerZero(fimRaw);
+    if (!dia || (!turma && !disciplina && !inicio && !fim)) continue;
 
     const intervalo = `${inicio}-${fim}`;
 
@@ -40,6 +35,6 @@ function montarQuadroHorarios(csvText) {
 }
 
 fetch('../assets/horario/horarios.csv')
-    .then(r => r.text())
-    .then(text => montarQuadroHorarios(text))
-    .catch(err => console.error('Erro ao carregar CSV', err));
+  .then(r => r.text())
+  .then(text => montarQuadroHorarios(text))
+  .catch(err => console.error('Erro ao carregar CSV', err));
