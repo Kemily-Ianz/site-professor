@@ -1,15 +1,22 @@
 Domingo;;;;
-Segunda-feira;INF2;Atendimento;7:30;9:30
+Segunda-feira;INF2;Aula;7:30;9:30
 Segunda-feira;;Reposição 2024;10:00;12:00
 Segunda-feira;;Reposição 2024;13:30;15:30
-Terça-feira;;;;
-Quarta-feira;INF2;Suporte TI;7:30;9:30 
-Quarta-feira;INF2;Suporte TI;10:00;12:00 
-Quinta-feira;INF2;Atendimento;13:30;14:00
-Quinta-feira;TADS4/TADS6;Sistemas Distribuídos;19:00;20:40
-Quinta-feira;TADS4/TADS6;Sistemas Distribuídos;21:00;22:40
-Quinta-feira;TADS4/TADS6;Atendimento;18:00;19:00
-Sexta-feira;INF1;Atendimento;10:00;12:00 
-Sexta-feira;INF1;Tec. Web;13:30;15:30 
-Sexta-feira;INF1;Tec. Web;16:00;18:00 
+Segunda-feira;INF1;Aula;16:00;18:00
+Terça-feira;;Atendimento;7:30;9:30
+Terça-feira;AUT2;Aula;10:00;12:00
+Terça-feira;AUT1;Aula;13:30;15:30
+Terça-feira;;Atendimento;16:00;18:00
+Quarta-feira;;Pesquisa e Extensão;7:30;9:30 
+Quarta-feira;;Pesquisa e Extensão;10:00;12:00
+Quarta-feira;;Pesquisa e Extensão;13:30;15:30
+Quarta-feira;;Pesquisa e Extensão;16:00;18:00
+Quinta-feira;;Manutenção do Ensino;7:30;9:30
+Quinta-feira;;Manutenção do Ensino;10:00;12:00
+Quinta-feira;;Manutenção do Ensino;13:30;15:30
+Quinta-feira;;Manutenção do Ensino;16:00;18:00
+Sexta-feira;;Pesquisa e Extensão;7:30;9:30 
+Sexta-feira;;Pesquisa e Extensão;10:00;12:00 
+Sexta-feira;;Pesquisa e Extensão;13:30;15:30 
+Sexta-feira;;Pesquisa e Extensão;16:00;18:00 
 Sábado;;;;
