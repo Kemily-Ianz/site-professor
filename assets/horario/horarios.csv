@@ -1,58 +1,22 @@
-// ===== DADOS DO HORÁRIO =====
-
-const dadosHorario = `
 Domingo;;;;
-
 Segunda-feira;INF2;Aula;07:30;09:30
 Segunda-feira;;Reposição 2024;10:00;12:00
 Segunda-feira;;Reposição 2024;13:30;15:30
 Segunda-feira;INF1;Aula;16:00;18:00
-
 Terça-feira;;Atendimento;07:30;09:30
 Terça-feira;AUT2;Aula;10:00;12:00
 Terça-feira;AUT1;Aula;13:30;15:30
 Terça-feira;;Atendimento;16:00;18:00
-
 Quarta-feira;;Pesquisa e Extensão;07:30;09:30 
 Quarta-feira;;Pesquisa e Extensão;10:00;12:00
 Quarta-feira;;Pesquisa e Extensão;13:30;15:30
 Quarta-feira;;Pesquisa e Extensão;16:00;18:00
-
 Quinta-feira;;Manutenção do Ensino;07:30;09:30
 Quinta-feira;;Manutenção do Ensino;10:00;12:00
 Quinta-feira;;Manutenção do Ensino;13:30;15:30
 Quinta-feira;;Manutenção do Ensino;16:00;18:00
-
-Sexta-feira;;Pesquisa e Extensão;07:30;09:30 
+Sexta-feira;;Pesquisa e Extensão;07:30;9:30 
 Sexta-feira;;Pesquisa e Extensão;10:00;12:00 
 Sexta-feira;;Pesquisa e Extensão;13:30;15:30 
-Sexta-feira;;Pesquisa e Extensão;16:00;18:00
-
+Sexta-feira;;Pesquisa e Extensão;16:00;18:00 
 Sábado;;;;
-`;
-
-// ===== PROCESSAMENTO =====
-
-const tabela = document.querySelector("#quadro-horarios tbody");
-
-if (tabela) {
-    dadosHorario.trim().split("\n").forEach(linha => {
-        const partes = linha.split(";");
-
-        if (partes.length < 5) return; // ignora linhas vazias
-
-        const [dia, turma, atividade, inicio, fim] = partes;
-
-        const tr = document.createElement("tr");
-
-        tr.innerHTML = `
-            <td data-dia="${dia}">${dia}</td>
-            <td data-dia="${dia}">${turma || "-"}</td>
-            <td data-dia="${dia}">${atividade || "-"}</td>
-            <td data-dia="${dia}">${inicio}</td>
-            <td data-dia="${dia}">${fim}</td>
-        `;
-
-        tabela.appendChild(tr);
-    });
-}
