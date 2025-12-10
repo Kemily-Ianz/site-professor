@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* --- HEADER / NAVEGAÇÃO --- */
 header {
     width: 100%;
     padding: 20px 40px;
@@ -49,12 +50,33 @@ nav .ativo {
     font-weight: bold;
 }
 
+/* --- SEÇÃO PRINCIPAL --- */
 main {
     width: 90%;
     max-width: 1200px;
     margin: 60px auto;
 }
 
+/* NOVO: Aplica a margem superior para todas as seções */
+main section {
+    margin-top: 80px; 
+}
+
+/* NOVO: Regras específicas da seção Início (para remover estilo inline) */
+#inicio {
+    padding-top: 40px;
+}
+
+/* NOVO: Estilo para o parágrafo de introdução */
+.introducao-texto {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: #4a4138;
+}
+
+/* Ajustado: Estilo para o H1 principal (título da página) */
 h1 {
     margin-bottom: 35px;
     font-size: 2.5rem;
@@ -64,6 +86,19 @@ h1 {
     border-bottom: 1px solid #e0d8cf;
 }
 
+/* NOVO: Estilo para os H2 de seção (Sobre, Horários, Atividades) */
+main h2 {
+    margin-bottom: 35px;
+    font-size: 2.2rem; 
+    color: #3b2f26;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0d8cf;
+    margin-top: 0;
+}
+
+
+/* --- CARDS (ATIVIDADES) --- */
 .cards {
     display: flex;
     gap: 25px;
@@ -87,11 +122,14 @@ h1 {
     box-shadow: 0 12px 20px #00000030;
 }
 
-.card h2 {
+/* Ajustado: Altera o seletor para H3, conforme o HTML revisado */
+.card h3 { 
     font-size: 1.6rem;
     margin-bottom: 15px;
     color: #4b3f35;
 }
+
+/* REMOVIDO: O seletor .card h2 não é mais necessário se você usa h3 nos cards */
 
 .card p,
 .card li {
@@ -105,6 +143,7 @@ h1 {
     padding-left: 20px;
 }
 
+/* --- SEÇÃO SOBRE --- */
 .sobre-container {
     display: flex;
     align-items: center;
@@ -129,6 +168,7 @@ h1 {
     color: #3b2f26;
 }
 
+/* --- TABELA HORÁRIOS --- */
 .tabela-horarios {
     width: 80%;
     margin: 40px auto;
@@ -147,6 +187,22 @@ h1 {
     font-weight: bold;
 }
 
+/* NOVO: Estilização específica para a coluna de tempo */
+.tabela-horarios th.hora {
+    background: #f0e6d8; 
+    color: #3b2f26; 
+    font-weight: bold;
+    text-align: left;
+    min-width: 120px;
+}
+/* NOVO: Estilização para os rótulos internos na coluna de tempo */
+.tabela-horarios .rotulo {
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: normal;
+}
+
+
 .tabela-horarios td {
     padding: 15px;
     text-align: center;
@@ -157,16 +213,19 @@ h1 {
     background: #f7f2ea;
 }
 
+/* --- FOOTER --- */
 footer {
     background: #efe7de;
     padding: 30px;
-    margin-top: 80px;
+    /* Ajuste para 100px para refletir a remoção do estilo inline */
+    margin-top: 100px; 
     text-align: center;
     font-size: 0.95rem;
     color: #555;
     border-top: 1px solid #d6c7b9;
 }
 
+/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
 @media (max-width: 700px) {
     
     nav {
@@ -198,8 +257,9 @@ footer {
     .tabela-horarios {
         width: 100%;
     }
-
-    h1 {
+    
+    /* Ajusta o tamanho dos títulos principais e de seção na versão móvel */
+    h1, main h2 {
         font-size: 2rem;
     }
 }
