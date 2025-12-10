@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,12 +6,10 @@
 }
 
 body {
-    background: #f5f0e8;
-    color: #3b2f26;
-    line-height: 1.6;
+    background: #f5f0e8; 
+    color: #333;
 }
 
-/* --- HEADER / NAVEGAÇÃO --- */
 header {
     width: 100%;
     padding: 20px 40px;
@@ -33,11 +31,10 @@ nav a {
     margin-left: 20px;
     text-decoration: none;
     font-size: 1rem;
-    color: #444; 
-    padding: 8px 15px;
-    border-radius: 12px;
-    transition: 0.3s ease;
-    font-weight: 500;
+    color: #444;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
 nav a:hover {
@@ -50,55 +47,19 @@ nav .ativo {
     font-weight: bold;
 }
 
-/* --- SEÇÃO PRINCIPAL --- */
 main {
     width: 90%;
     max-width: 1200px;
     margin: 60px auto;
 }
 
-/* NOVO: Aplica a margem superior para todas as seções */
-main section {
-    margin-top: 80px; 
-}
-
-/* NOVO: Regras específicas da seção Início (para remover estilo inline) */
-#inicio {
-    padding-top: 40px;
-}
-
-/* NOVO: Estilo para o parágrafo de introdução */
-.introducao-texto {
-    text-align: center;
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 20px auto 0;
-    color: #4a4138;
-}
-
-/* Ajustado: Estilo para o H1 principal (título da página) */
 h1 {
-    margin-bottom: 35px;
-    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-size: 2rem;
     color: #3b2f26;
     text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e0d8cf;
 }
 
-/* NOVO: Estilo para os H2 de seção (Sobre, Horários, Atividades) */
-main h2 {
-    margin-bottom: 35px;
-    font-size: 2.2rem; 
-    color: #3b2f26;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e0d8cf;
-    margin-top: 0;
-}
-
-
-/* --- CARDS (ATIVIDADES) --- */
 .cards {
     display: flex;
     gap: 25px;
@@ -108,136 +69,102 @@ main h2 {
 
 .card {
     width: 310px;
-    background: rgba(255, 255, 255, 0.85);
+    background: #ffffffdd;
     border-radius: 22px;
-    padding: 30px;
-    box-shadow: 0 8px 15px #00000020;
+    padding: 25px;
+    box-shadow: 0 5px 12px #00000020;
     border: 1px solid #e0d8cf;
-    backdrop-filter: blur(8px);
-    transition: transform .3s, box-shadow .3s;
+    backdrop-filter: blur(4px);
+    transition: transform .2s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 20px #00000030;
+    transform: translateY(-4px);
 }
 
-/* Ajustado: Altera o seletor para H3, conforme o HTML revisado */
-.card h3 { 
-    font-size: 1.6rem;
-    margin-bottom: 15px;
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
     color: #4b3f35;
 }
-
-/* REMOVIDO: O seletor .card h2 não é mais necessário se você usa h3 nos cards */
 
 .card p,
 .card li {
     font-size: 1rem;
-    margin-bottom: 10px;
-    color: #4a4138;
+    margin-bottom: 8px;
 }
 
 .card ul {
-    list-style: disc;
-    padding-left: 20px;
+    list-style: none;
+    padding-left: 0;
 }
 
-/* --- SEÇÃO SOBRE --- */
 .sobre-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     flex-wrap: wrap;
-    padding: 30px 0;
 }
 
 .sobre-img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 6px 15px #00000030;
-    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #00000025;
 }
 
 .sobre-texto {
-    max-width: 550px;
-    font-size: 1.15rem;
-    color: #3b2f26;
+    max-width: 500px;
+    font-size: 1.1rem;
+    color: #4a4138;
 }
 
-/* --- TABELA HORÁRIOS --- */
 .tabela-horarios {
-    width: 80%;
-    margin: 40px auto;
+    width: 100%;
     border-collapse: collapse;
     background: #ffffffdd;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 5px 15px #00000020;
+    box-shadow: 0 5px 10px #00000020;
 }
 
 .tabela-horarios th {
     background: #d8c8b7;
-    padding: 15px;
-    color: #3b2f26;
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 12px;
 }
-
-/* NOVO: Estilização específica para a coluna de tempo */
-.tabela-horarios th.hora {
-    background: #f0e6d8; 
-    color: #3b2f26; 
-    font-weight: bold;
-    text-align: left;
-    min-width: 120px;
-}
-/* NOVO: Estilização para os rótulos internos na coluna de tempo */
-.tabela-horarios .rotulo {
-    font-size: 0.85rem;
-    color: #777;
-    font-weight: normal;
-}
-
 
 .tabela-horarios td {
-    padding: 15px;
+    padding: 12px;
     text-align: center;
-    border-top: 1px solid #e7dbcd;
+    border-top: 1px solid #eee;
 }
 
 .tabela-horarios tr:nth-child(even) {
     background: #f7f2ea;
 }
 
-/* --- FOOTER --- */
 footer {
     background: #efe7de;
-    padding: 30px;
-    /* Ajuste para 100px para refletir a remoção do estilo inline */
-    margin-top: 100px; 
+    padding: 20px;
+    margin-top: 70px;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #555;
     border-top: 1px solid #d6c7b9;
 }
 
-/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
 @media (max-width: 700px) {
     
     nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
-        margin-top: 10px;
+        gap: 10px;
     }
 
     header {
-        padding: 15px 20px;
         flex-direction: column;
         text-align: center;
         gap: 10px;
@@ -246,20 +173,10 @@ footer {
     .sobre-container {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
     }
 
     .card {
         width: 100%;
-        max-width: 400px;
-    }
-
-    .tabela-horarios {
-        width: 100%;
-    }
-    
-    /* Ajusta o tamanho dos títulos principais e de seção na versão móvel */
-    h1, main h2 {
-        font-size: 2rem;
+        max-width: 350px;
     }
 }
