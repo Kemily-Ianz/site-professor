@@ -180,3 +180,83 @@ footer {
         max-width: 350px;
     }
 }
+/* ======== ESTILO DA TABELA DE HORÁRIOS ======== */
+
+#quadro-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background: #1a1a1a; /* fundo preto elegante */
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+/* Cabeçalho */
+#quadro-horarios thead th {
+    background: #3b68ff; /* azul igual ao modelo */
+    padding: 18px;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Células */
+#quadro-horarios td,
+#quadro-horarios th {
+    padding: 18px;
+    border: 1px solid #ffffff20; /* linhas suaves */
+    text-align: center;
+}
+
+/* Coluna dos horários */
+#quadro-horarios .hora {
+    background: #2b2b2b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#quadro-horarios .hora .rotulo {
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+/* Linhas zebrada */
+#quadro-horarios tbody tr:nth-child(even) {
+    background: #202020;
+}
+
+/* Clique ou hover */
+#quadro-horarios td:hover {
+    background: #3b68ff33;
+    transition: 0.2s;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 800px) {
+
+    #quadro-horarios thead {
+        display: none; /* esconde cabeçalho no celular */
+    }
+
+    #quadro-horarios tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ffffff22;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #quadro-horarios td,
+    #quadro-horarios th.hora {
+        display: block;
+        text-align: left;
+    }
+
+    #quadro-horarios td::before {
+        content: attr(data-dia) ": ";
+        font-weight: bold;
+        color: #3b68ff;
+    }
+}
