@@ -1,4 +1,4 @@
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,8 +6,9 @@
 }
 
 body {
-    background: #f5f0e8; 
-    color: #333;
+    background: #f5f0e8;
+    color: #3b2f26;
+    line-height: 1.6;
 }
 
 header {
@@ -31,10 +32,11 @@ nav a {
     margin-left: 20px;
     text-decoration: none;
     font-size: 1rem;
-    color: #444;
-    padding: 5px 10px;
-    border-radius: 8px;
-    transition: 0.2s;
+    color: #444; 
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    font-weight: 500;
 }
 
 nav a:hover {
@@ -54,10 +56,12 @@ main {
 }
 
 h1 {
-    margin-bottom: 25px;
-    font-size: 2rem;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
     color: #3b2f26;
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0d8cf;
 }
 
 .cards {
@@ -69,76 +73,84 @@ h1 {
 
 .card {
     width: 310px;
-    background: #ffffffdd;
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 22px;
-    padding: 25px;
-    box-shadow: 0 5px 12px #00000020;
+    padding: 30px;
+    box-shadow: 0 8px 15px #00000020;
     border: 1px solid #e0d8cf;
-    backdrop-filter: blur(4px);
-    transition: transform .2s;
+    backdrop-filter: blur(8px);
+    transition: transform .3s, box-shadow .3s;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px #00000030;
 }
 
 .card h2 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
     color: #4b3f35;
 }
 
 .card p,
 .card li {
     font-size: 1rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    color: #4a4138;
 }
 
 .card ul {
-    list-style: none;
-    padding-left: 0;
+    list-style: disc;
+    padding-left: 20px;
 }
 
 .sobre-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     flex-wrap: wrap;
+    padding: 30px 0;
 }
 
 .sobre-img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px #00000025;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px #00000030;
+    border: 5px solid white;
 }
 
 .sobre-texto {
-    max-width: 500px;
-    font-size: 1.1rem;
-    color: #4a4138;
+    max-width: 550px;
+    font-size: 1.15rem;
+    color: #3b2f26;
 }
 
 .tabela-horarios {
-    width: 100%;
+    width: 80%;
+    margin: 40px auto;
     border-collapse: collapse;
     background: #ffffffdd;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 5px 10px #00000020;
+    box-shadow: 0 5px 15px #00000020;
 }
 
 .tabela-horarios th {
     background: #d8c8b7;
-    padding: 12px;
+    padding: 15px;
+    color: #3b2f26;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .tabela-horarios td {
-    padding: 12px;
+    padding: 15px;
     text-align: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e7dbcd;
 }
 
 .tabela-horarios tr:nth-child(even) {
@@ -147,10 +159,10 @@ h1 {
 
 footer {
     background: #efe7de;
-    padding: 20px;
-    margin-top: 70px;
+    padding: 30px;
+    margin-top: 80px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #555;
     border-top: 1px solid #d6c7b9;
 }
@@ -161,10 +173,12 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
+        margin-top: 10px;
     }
 
     header {
+        padding: 15px 20px;
         flex-direction: column;
         text-align: center;
         gap: 10px;
@@ -173,10 +187,19 @@ footer {
     .sobre-container {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     .card {
         width: 100%;
-        max-width: 350px;
+        max-width: 400px;
+    }
+
+    .tabela-horarios {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
